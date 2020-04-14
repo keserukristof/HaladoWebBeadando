@@ -1,0 +1,53 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "firstName": "István",
+      "lastName": "Nagy",
+      "email": "pista@gmail.com",
+      "age": 34,
+      "companyId": "1"
+    },
+    {
+      "id": "2",
+      "firstName": "Bálint",
+      "lastName": "Balla",
+      "email": "bali@gmail.com",
+      "age": 14,
+      "companyId": "2"
+    },
+    {
+      "id": "3",
+      "firstName": "Kristóf",
+      "lastName": "Balogh",
+      "email": "kriss@gmail.com",
+      "age": 53,
+      "companyId": "3"
+    },
+    {
+      "id": "4",
+      "firstName": "János",
+      "lastName": "Kiss",
+      "email": "jancsi@gmail.com",
+      "age": 44,
+      "companyId": "4"
+    }
+  ],
+  "companies": [
+    {
+      "id": "1",
+      "name": "Apple",
+      "description": "Alma alma alma alma alma alma"
+    },
+    {
+      "id": "2",
+      "name": "Logitech",
+      "description": "Logi logi logi logi logi logilogi logi"
+    },
+    {
+      "id": "3",
+      "name": "Pico",
+      "description": "Pico pico pico picopico pico pico pico"
+    }
+  ]
+}
