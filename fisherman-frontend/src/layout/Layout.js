@@ -1,56 +1,55 @@
-import React from "react";
-import PropTypes from "prop-types";
-import AppBar from "@material-ui/core/AppBar";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import Divider from "@material-ui/core/Divider";
-import Drawer from "@material-ui/core/Drawer";
-import Hidden from "@material-ui/core/Hidden";
-import IconButton from "@material-ui/core/IconButton";
-import List from "@material-ui/core/List";
-import MenuIcon from "@material-ui/icons/Menu";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
+import React from 'react';
+import PropTypes from 'prop-types';
+import AppBar from '@material-ui/core/AppBar';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Divider from '@material-ui/core/Divider';
+import Drawer from '@material-ui/core/Drawer';
+import Hidden from '@material-ui/core/Hidden';
+import IconButton from '@material-ui/core/IconButton';
+import List from '@material-ui/core/List';
+import MenuIcon from '@material-ui/icons/Menu';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 
 import HomeIcon from '@material-ui/icons/Home';
 import TableChartIcon from '@material-ui/icons/TableChart';
-import NoteIcon from '@material-ui/icons/Note';
 import CodeIcon from '@material-ui/icons/Code';
 import PortraitIcon from '@material-ui/icons/Portrait';
+import EmojiPeopleIcon from '@material-ui/icons/EmojiPeople';
 
-import ListItemLink from "./ListItemLink";
+import ListItemLink from './ListItemLink';
 
+const drawerWidth = 240;
 
-const drawerWidth = 225;
-
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
-    display: "flex"
+    display: 'flex',
   },
   drawer: {
-    [theme.breakpoints.up("sm")]: {
+    [theme.breakpoints.up('sm')]: {
       width: drawerWidth,
-      flexShrink: 0
-    }
+      flexShrink: 0,
+    },
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
   },
   menuButton: {
     marginRight: theme.spacing(2),
-    [theme.breakpoints.up("sm")]: {
-      display: "none"
-    }
+    [theme.breakpoints.up('sm')]: {
+      display: 'none',
+    },
   },
   // necessary for content to be below app bar
   toolbar: theme.mixins.toolbar,
   drawerPaper: {
-    width: drawerWidth
+    width: drawerWidth,
   },
   content: {
     flexGrow: 1,
     padding: theme.spacing(3),
-  }
+  },
 }));
 
 function ResponsiveDrawer(props) {
@@ -68,31 +67,29 @@ function ResponsiveDrawer(props) {
       <div className={classes.toolbar} />
       <Divider />
       <List>
-        <ListItemLink to="/" primary="Home page" icon={<HomeIcon />} />
         <ListItemLink
-          to="/time-table"
-          primary="Timetable planner"
+          to='/'
+          primary='Home page'
+          icon={<HomeIcon />}
+        />
+        <ListItemLink
+          to='/time-table'
+          primary='Community catches'
           icon={<TableChartIcon />}
         />
-        <ListItemLink to="/notes" primary="Notes" icon={<NoteIcon />} />
         <ListItemLink
-          to="/about-the-program"
-          primary="About the program"
+          to='/notes'
+          primary='My own catches'
+          icon={<EmojiPeopleIcon />}
+        />
+        <ListItemLink
+          to='/about-the-program'
+          primary='About the program'
           icon={<CodeIcon />}
         />
         <ListItemLink
-          to="/about-the-author"
-          primary="About the author"
-          icon={<PortraitIcon />}
-        />
-        <ListItemLink
-          to="/login"
-          primary="Login"
-          icon={<PortraitIcon />}
-        />
-        <ListItemLink 
-          to="sign-up"
-          primary="Sign up"
+          to='/about-the-author'
+          primary='About the author'
           icon={<PortraitIcon />}
         />
       </List>
@@ -102,47 +99,47 @@ function ResponsiveDrawer(props) {
   return (
     <div className={classes.root}>
       <CssBaseline />
-      <AppBar position="fixed" className={classes.appBar}>
+      <AppBar position='fixed' className={classes.appBar}>
         <Toolbar>
           <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
+            color='inherit'
+            aria-label='open drawer'
+            edge='start'
             onClick={handleDrawerToggle}
             className={classes.menuButton}
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
-            YourTime
+          <Typography variant='h6' noWrap>
+            Fisherman’s Log
           </Typography>
         </Toolbar>
       </AppBar>
-      <nav className={classes.drawer} aria-label="mailbox folders">
+      <nav className={classes.drawer} aria-label='mailbox folders'>
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
-        <Hidden smUp implementation="css">
+        <Hidden smUp implementation='css'>
           <Drawer
             container={container}
-            variant="temporary"
-            anchor={theme.direction === "rtl" ? "right" : "left"}
+            variant='temporary'
+            anchor={theme.direction === 'rtl' ? 'right' : 'left'}
             open={mobileOpen}
             onClose={handleDrawerToggle}
             classes={{
-              paper: classes.drawerPaper
+              paper: classes.drawerPaper,
             }}
             ModalProps={{
-              keepMounted: true // Better open performance on mobile.
+              keepMounted: true, // Better open performance on mobile.
             }}
           >
             {drawer}
           </Drawer>
         </Hidden>
-        <Hidden xsDown implementation="css">
+        <Hidden xsDown implementation='css'>
           <Drawer
             classes={{
-              paper: classes.drawerPaper
+              paper: classes.drawerPaper,
             }}
-            variant="permanent"
+            variant='permanent'
             open
           >
             {drawer}
@@ -162,7 +159,7 @@ ResponsiveDrawer.propTypes = {
    * Injected by the documentation to work in an iframe.
    * You won't need it on your project.
    */
-  container: PropTypes.any
+  container: PropTypes.any,
 };
 
 export default ResponsiveDrawer;
