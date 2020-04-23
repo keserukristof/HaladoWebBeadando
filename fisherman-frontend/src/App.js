@@ -11,7 +11,7 @@ import AboutTheProgram from './pages/AboutTheProgram';
 import Home from './pages/Home';
 import AboutMe from './pages/AboutMe';
 import TimeTable from './pages/TimeTable';
-import Notes from './pages/Notes';
+import MyOwnCatches from './pages/MyOwnCatches';
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
       <Layout>
         <Route exact={true} path='/' component={Home} />
         <Route path='/time-table' component={TimeTable} />
-        <Route path='/notes' component={Notes} />
+        <Route path='/notes' component={MyOwnCatches} />
         <Route
           path='/about-the-program'
           component={AboutTheProgram}
