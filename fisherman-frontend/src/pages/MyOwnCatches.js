@@ -48,7 +48,7 @@ class MyOwnCatches extends Component {
       columns: [
         { title: 'Equipment', field: 'equipment' },
         { title: 'Bait', field: 'bait' },
-        { title: 'Fishing pole', field: 'fishing_poles' },
+        { title: 'Fishing pole', field: 'fishing_pole' },
         { title: 'Preferred technique', field: 'preferred_technique' },
         { title: 'Lake', field: 'lake' },
       ],

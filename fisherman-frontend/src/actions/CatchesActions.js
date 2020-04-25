@@ -2,16 +2,15 @@ import dispatcher from '../AppDispatcher';
 
 class CatchesActions {
 
+    fetchCatches(){
+        dispatcher.handleViewAction({
+            command: 'FETCH_DATA'
+        })
+    }
+
     addToTable(item){
         dispatcher.handleViewAction({
             command : 'ADD_CATCH',
-            item : item
-        });
-    }
-
-    removeFromTable(item){
-        dispatcher.handleViewAction({
-            command : 'REMOVE_CATCH',
             item : item
         });
     }
