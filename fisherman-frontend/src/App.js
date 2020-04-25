@@ -10,15 +10,15 @@ import Layout from './layout/Layout';
 import AboutTheProgram from './pages/AboutTheProgram';
 import Home from './pages/Home';
 import AboutMe from './pages/AboutMe';
-import TimeTable from './pages/TimeTable';
 import MyOwnCatches from './pages/MyOwnCatches';
+import CommunityCatches from './pages/CommunityCatches';
 
 function App() {
   return (
     <Router>
       <Layout>
-        <Route exact={true} path='/' component={Home} />
-        <Route path='/time-table' component={TimeTable} />
+        <Route exact path='/' component={Home} />
+        <Route path='/time-table' component={CommunityCatches} />
         <Route path='/notes' component={MyOwnCatches} />
         <Route
           path='/about-the-program'

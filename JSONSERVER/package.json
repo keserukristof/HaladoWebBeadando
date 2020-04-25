@@ -4,7 +4,7 @@
   "description": "Fake REST API for adv web tech",
   "main": "index.js",
   "scripts": {
-    "json:server": "json-server --watch db.json --port 3001"
+    "start": "json-server --watch db.json --port 3001"
   },
   "author": "Kristóf Keserű",
   "license": "ISC",

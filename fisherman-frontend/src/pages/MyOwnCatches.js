@@ -1,5 +1,7 @@
-import React from 'react';
-import { forwardRef, useState } from 'react';
+import React, { Component } from 'react';
+import { forwardRef } from 'react';
+
+import axios from 'axios';
 
 import MaterialTable from 'material-table';
 
@@ -39,129 +41,76 @@ const tableIcons = {
   ViewColumn: forwardRef((props, ref) => <ViewColumn {...props} ref={ref} />),
 };
 
-function MyOwnCatches() {
-  const [state, setState] = useState({
-    columns: [
-      { title: 'Equipment', field: 'equipment' },
-      { title: 'Bait', field: 'bait' },
-      { title: 'Fishing pole', field: 'fishing_pole' },
-      { title: 'Preferred technique', field: 'preferred_technique' },
-    ],
-    data: [
-      {
-        equipment: 'Bot',
-        bait: 'Csonti',
-        fishing_pole: 'Bot',
-        preferred_technique: 'semmi',
-      },
-      {
-        equipment: 'Bot',
-        bait: 'Csonti',
-        fishing_pole: 'Bot',
-        preferred_technique: 'semmi',
-      },
-      {
-        equipment: 'Bot',
-        bait: 'Csonti',
-        fishing_pole: 'Bot',
-        preferred_technique: 'semmi',
-      },
-      {
-        equipment: 'Bot',
-        bait: 'Csonti',
-        fishing_pole: 'Bot',
-        preferred_technique: 'semmi',
-      },
-      {
-        equipment: 'Bot',
-        bait: 'Csonti',
-        fishing_pole: 'Bot',
-        preferred_technique: 'semmi',
-      },
-      {
-        equipment: 'Bot',
-        bait: 'Csonti',
-        fishing_pole: 'Bot',
-        preferred_technique: 'semmi',
-      },
-      {
-        equipment: 'Bot',
-        bait: 'Csonti',
-        fishing_pole: 'Bot',
-        preferred_technique: 'semmi',
-      },
-      {
-        equipment: 'Bot',
-        bait: 'Csonti',
-        fishing_pole: 'Bot',
-        preferred_technique: 'semmi',
-      },
-      {
-        equipment: 'Bot',
-        bait: 'Csonti',
-        fishing_pole: 'Bot',
-        preferred_technique: 'semmi',
-      },
-      {
-        equipment: 'Bot',
-        bait: 'Csonti',
-        fishing_pole: 'Bot',
-        preferred_technique: 'semmi',
-      },
-      {
-        equipment: 'Bot',
-        bait: 'Csonti',
-        fishing_pole: 'Bot',
-        preferred_technique: 'semmi',
-      },
-    ],
-  });
+class MyOwnCatches extends Component {
+  constructor() {
+    super();
+    this.state = {
+      columns: [
+        { title: 'Equipment', field: 'equipment' },
+        { title: 'Bait', field: 'bait' },
+        { title: 'Fishing pole', field: 'fishing_poles' },
+        { title: 'Preferred technique', field: 'preferred_technique' },
+        { title: 'Lake', field: 'lake' },
+      ],
+      data: [],
+    };
+  }
 
-  return (
-    <MaterialTable
-      title='My own catches'
-      icons={tableIcons}
-      columns={state.columns}
-      data={state.data}
-      editable={{
-        onRowAdd: (newData) =>
-          new Promise((resolve) => {
-            setTimeout(() => {
-              resolve();
-              setState((prevState) => {
-                const data = [...prevState.data];
-                data.push(newData);
-                return { ...prevState, data };
-              });
-            }, 600);
-          }),
-        onRowUpdate: (newData, oldData) =>
-          new Promise((resolve) => {
-            setTimeout(() => {
-              resolve();
-              if (oldData) {
-                setState((prevState) => {
+  componentDidMount() {
+    axios.get('/catches?uid=3').then((res) => {
+      const catches = res.data;
+      this.setState({ data: catches });
+      console.log(catches);
+    });
+  }
+
+  render() {
+    return (
+      <MaterialTable
+        title='My own catches'
+        icons={tableIcons}
+        columns={this.state.columns}
+        data={this.state.data}
+        editable={{
+          onRowAdd: (newData) =>
+            new Promise((resolve) => {
+              setTimeout(() => {
+                resolve();
+                this.setState((prevState) => {
                   const data = [...prevState.data];
-                  data[data.indexOf(oldData)] = newData;
+                  data.push(newData);
                   return { ...prevState, data };
                 });
-              }
-            }, 600);
-          }),
-        onRowDelete: (oldData) =>
-          new Promise((resolve) => {
-            setTimeout(() => {
-              resolve();
-              setState((prevState) => {
-                const data = [...prevState.data];
-                data.splice(data.indexOf(oldData), 1);
-                return { ...prevState, data };
-              });
-            }, 600);
-          }),
-      }}
-    />
-  );
+              }, 600);
+            }),
+          onRowUpdate: (newData, oldData) =>
+            new Promise((resolve) => {
+              setTimeout(() => {
+                resolve();
+                if (oldData) {
+                  this.setState((prevState) => {
+                    const data = [...prevState.data];
+                    data[data.indexOf(oldData)] = newData;
+                    return { ...prevState, data };
+                  });
+                }
+              }, 600);
+            }),
+          onRowDelete: (oldData) =>
+            new Promise((resolve) => {
+              setTimeout(() => {
+                resolve();
+                this.setState((prevState) => {
+                  const data = [...prevState.data];
+                  data.splice(data.indexOf(oldData), 1);
+                  return { ...prevState, data };
+                });
+              }, 600);
+            }),
+        }}
+      />
+    );
+  }
 }
 
 export default MyOwnCatches;

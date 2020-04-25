@@ -34,39 +34,12 @@ const AboutTheProgram = () => {
         <Grid item xs={12} sm={8}>
           <Grid container spacing={5}>
             <Grid item xs>
-              <Box
-                textAlign='center'
-                fontWeight={250}
-                fontSize={40}
-                m={1}
-              >
+              <Box textAlign='center' fontWeight={250} fontSize={40} m={1}>
                 About the program
               </Box>
               <Box textAlign='left' m={1}>
-                Lorem ipsum dolor sit amet consectetur adipisicing
-                elit. Nobis sunt vitae harum, nihil culpa dignissimos
-                laborum ipsum quo eius cumque magnam consectetur.
-                Illum a autem ad optio sit molestiae itaque.
-              </Box>
-              <Box textAlign='left' m={1}>
-                Lorem ipsum dolor sit amet consectetur adipisicing
-                elit. Nam ipsa consectetur ad minus tempora, dolorum
-                temporibus aliquam a ipsam porro tenetur enim optio
-                hic ullam excepturi nesciunt deserunt placeat. Soluta?
-              </Box>
-              <Box textAlign='left' m={1}>
-                Lorem ipsum dolor sit amet consectetur, adipisicing
-                elit. Ab possimus quibusdam consequuntur ea nobis
-                libero ipsa ad dolores accusamus neque harum,
-                accusantium praesentium, fugit, placeat nulla dolorem
-                doloremque perferendis saepe.
-              </Box>
-              <Box textAlign='left' m={1}>
-                Lorem ipsum dolor, sit amet consectetur adipisicing
-                elit. Sit, rem eaque. Nam veritatis consectetur ipsam
-                iure temporibus mollitia, itaque pariatur quod
-                nesciunt modi illum aut illo animi cupiditate ducimus
-                neque!
+                This program is made for the International Fishing Association. It's a site
+                where the sportsmen can log and document their catches.
               </Box>
             </Grid>
           </Grid>

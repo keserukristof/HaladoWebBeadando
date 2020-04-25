@@ -8,7 +8,8 @@
       "equipment": "Double Spring Fishing Stand Bracket",
       "bait": "Cabela's Mean Eye Blade Bait",
       "fishing_poles": "Denali N3 Bass Spinning Rod",
-      "lake": "Beau Lake"
+      "lake": "Beau Lake",
+      "preferred_technique": "Spearfishing"
     },
     {
       "id": "2",
@@ -18,7 +19,8 @@
       "equipment": "Portable Triangular Folding Fishing Landing Net",
       "bait": "Cabela's Mean Eye Blade Bait",
       "fishing_poles": "Denali Kovert Lite Bass Spinning Rod",
-      "lake": "Lac Wallace"
+      "lake": "Lac Wallace",
+      "preferred_technique": "Hand-gathering"
     },
     {
       "id": "3",
@@ -28,7 +30,8 @@
       "equipment": "Foldable Steel Wire",
       "bait": "Shortbus Flasher",
       "fishing_poles": "Fenwick HMG Travel Casting Rod",
-      "lake": "Lake George"
+      "lake": "Lake George",
+      "preferred_technique": "Cyanide fishing"
     },
     {
       "id": "4",
@@ -38,17 +41,19 @@
       "equipment": "Foldable Steel Wire",
       "bait": "Shortbus Flasher",
       "fishing_poles": "Fenwick HMG Travel Casting Rod",
-      "lake": "Gunflint Lake"
+      "lake": "Gunflint Lake",
+      "preferred_technique": "Line fishing"
     },
     {
       "id": "5",
       "uid": "3",
       "firstName": "Joe",
       "lastName": "Goldberg",
-      "equipment": "Foldable Steel Wire",
+      "equipment": "Shimano Fishing Cord",
       "bait": "Shortbus Flasher",
       "fishing_poles": "Fenwick HMG Travel Casting Rod",
-      "lake": "Wednesday Bay"
+      "lake": "Wednesday Bay",
+      "preferred_technique": "Netting"
     },
     {
       "id": "6",
@@ -58,8 +63,63 @@
       "equipment": "Foldable Steel Wire",
       "bait": "PowerBait Worm",
       "fishing_poles": "KEK Travel Spinning Rod",
-      "lake": "Wednesday Bay"
+      "lake": "Wednesday Bay",
+      "preferred_technique": "Anging"
+    },
+    {
+      "id": "7",
+      "uid": "3",
+      "firstName": "Joe",
+      "lastName": "Goldberg",
+      "equipment": "Steel Wire For Shark",
+      "bait": "SuperBait Flasher",
+      "fishing_poles": "Fenwick HMG Travel Casting Rod",
+      "lake": "Gunflint Lake",
+      "preferred_technique": "Trapping"
+    },
+    {
+      "id": "8",
+      "uid": "3",
+      "firstName": "Joe",
+      "lastName": "Goldberg",
+      "equipment": "Kogha Double Bed Chair",
+      "bait": "Worm",
+      "fishing_poles": "Fenwick HMG Travel Casting Rod",
+      "lake": "Wednesday Bay",
+      "preferred_technique": "Trapping"
+    },
+    {
+      "id": "9",
+      "uid": "3",
+      "firstName": "Joe",
+      "lastName": "Goldberg",
+      "equipment": "Foldable Steel Wire",
+      "bait": "Crayfish",
+      "fishing_poles": "Johnny Morris Patriot Spinning Rod",
+      "lake": "Wednesday Bay",
+      "preferred_technique": "Anging"
+    },
+    {
+      "id": "10",
+      "uid": "3",
+      "firstName": "Joe",
+      "lastName": "Goldberg",
+      "equipment": "Shimano Stradic Eye Glasses",
+      "bait": "Worm",
+      "fishing_poles": "Fenwick HMG Travel Casting Rod",
+      "lake": "Wednesday Bay",
+      "preferred_technique": "Trapping"
+    },
+    {
+      "id": "11",
+      "uid": "4",
+      "firstName": "Dexter",
+      "lastName": "Williams",
+      "equipment": "Sun Stopper Gaiter",
+      "bait": "Worm",
+      "fishing_poles": "Ton Carbon Fiber Casting and Spinning Rod",
+      "lake": "Basalt Lake",
+      "preferred_technique": "Netting"
     }
-    
   ]
 }
